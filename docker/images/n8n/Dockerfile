@@ -6,7 +6,7 @@ ARG N8N_VERSION=1.21.1
 FROM n8nio/base:${NODE_VERSION}
 
 # Re-declare the build args after FROM to use them inside this stage
-ARG N8N_VERSION
+ARG N8N_VERSION=1.21.1
 
 # Fails fast if the version wasn't passed correctly
 RUN if [ -z "$N8N_VERSION" ]; then echo "The N8N_VERSION argument is missing!"; exit 1; fi
